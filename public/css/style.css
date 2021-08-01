@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,300&display=swap');
+
+*{
+    font-family: 'Piazzolla', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --main-bg: #1e272e;
+    --main-color : #0097e6;
+}
+html{
+    font-size: 62.5%;
+}
+.main-menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    /* padding: 1rem 0; */
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a{
+    color: #fff;
+    font-size: 15.rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler-icon{
+    background-color: gray;
+    border-color: #fff;
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.main-header-left{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-header-left p{
+    font-size: 3rem;
+}
+.main-header-left .text{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.main-header-left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 1.5rem;
+    text-transform: capitalize;
+    box-shadow: 0 10px 6px -6px #000;
+    outline: none;
+}
+.main-header-left button:hover{
+    box-shadow: 0 10px 6px -6px var(--main-color);
+}
+.main-header-left h1{
+    font-size: 3rem;
+    margin: 1rem 0 3rem 0;
+    text-transform: capitalize;
+}
+.main-header-right{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-header-right .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+.main-header-right .carousel-item img{
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+.main-header-right .img-fluid{
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+.errorImg{
+    width: 60rem;
+    height: 15rem;
+}
+
+/* weather page */
+
+.temp-form{
+    width: 60%;
+    position: relative;
+    margin: 3rem auto 4rem;
+}
+.temp-form input[type="text"]{
+    width: 100%;
+    padding: 1rem 5rem 1rem 2rem;
+    background: #1e202b;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.temp-form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.temp-form input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
+}
+
+/* main-box of temp  */
+
+.temp-info{
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+}
+.top-layer{
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.top-layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.main-layer{
+    width: 100%;
+    height: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.main-layer #city_name{
+    padding: 1rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.main-layer .middle-layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+.main-layer .middle-layer p,
+.main-layer .middle-layer .fa {
+    font-size: 6rem;
+    font-weight: 900;
+}
+.fa{
+    color: #009ad8;
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+.data-hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+/* responsive code */
+@media (max-width:768px){
+    .main-header-left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main-header-right{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .temp-form{
+        width: auto;
+    }
+    .temp-info{
+        width: auto;
+    }
+    .main-layer .middle-layer p,
+    .main-layer .middle-layer .fa {
+    font-size: 4rem;
+    font-weight: 900;
+    }
+}

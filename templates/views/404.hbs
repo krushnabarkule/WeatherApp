@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>links}}
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- main-header -->
+    <div class="container-fluid main-header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <!-- right side div -->
+                    <div class="col-md-12 col-12 mx-auto main-header-left  align-items-center">
+                        <figure class="errorImg">
+                            <img src="images/404-error.png" alt="Krushna" class="img-fluid" >
+                        </figure>
+
+                        <h1 style="color: red;"> {{errorMsg}} </h1>
+                        <p>Enter correct url and you will get actual response</p>
+                        <a href="/" target="_kb"><button> Go to home page</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+</body>
+
+</html>
+
