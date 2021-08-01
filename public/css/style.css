@@ -31,7 +31,7 @@ html{
 }
 .navbar a{
     color: #fff;
-    font-size: 15.rem;
+    font-size: 20.rem;
 }
 .navbar a:hover{
     color: var(--main-color);
